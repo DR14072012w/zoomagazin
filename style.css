@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #205622;
+  }
+  
+  header {
+    background-color: #4caf50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  nav {
+    background-color: #388e3c;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .container {
+    padding: 20px;
+  }
+  
+  .product {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    display: inline-block;
+    width: 200px;
+    background-color: white;
+    vertical-align: top;
+    text-align: center;
+  }
+  
+  .product img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  h1 {
+    text-align:center;
+    font-size: 40px;
+    color: white;
+  }
+
+  p {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+  }
+
+  .review {
+    font-style: italic;
+    font-size: 25px;
+    text-align: left;
+  }
+
+  .prikol {
+    text-decoration: none;
+    color: cyan;
+  }
+
+  .poveril {
+    font-size: 50px;
+  }
