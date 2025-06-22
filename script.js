@@ -3,6 +3,8 @@ let igrashka = document.querySelector('.igrashka')
 let klitka = document.querySelector('.klitka')
 let vsi = document.querySelector('.vsi')
 
+let patrik = "https://images.steamusercontent.com/ugc/2505772116923985863/396AB6C3F473740BCEF284E1C2C2817422E23E74/?imw=1024&imh=636&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true"
+
 const products = [
     {
       name: "Корм для котів",
@@ -33,7 +35,10 @@ const products = [
       <img src="${product.image}" alt="${product.name}">
       <h3>${product.name}</h3>
       <p>${product.price}</p>
-      <button onclick="alert('Додано до кошика: ${product.name}')">Купити</button>
+      <form action="https://images.steamusercontent.com/ugc/2505772116923985863/396AB6C3F473740BCEF284E1C2C2817422E23E74/?imw=1024&imh=636&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true" target="_blank">
+        <button type="submit">Купити</button>
+      </form>
+
     `;
     container.appendChild(div);
   });
@@ -50,7 +55,9 @@ const products = [
           <img src="${product.image}" alt="${product.name}">
           <h3>${product.name}</h3>
           <p>${product.price}</p>
-          <button onclick="alert('Додано до кошика: ${product.name}')">Купити</button>
+          <form action="https://images.steamusercontent.com/ugc/2505772116923985863/396AB6C3F473740BCEF284E1C2C2817422E23E74/?imw=1024&imh=636&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true" target="_blank">
+            <button type="submit">Купити</button>
+          </form>
         `;
         container.appendChild(divN);
       }
@@ -81,7 +88,9 @@ const products = [
         <img src="${product.image}" alt="${product.name}">
         <h3>${product.name}</h3>
         <p>${product.price}</p>
-        <button onclick="alert('Додано до кошика: ${product.name}')">Купити</button>
+        <form action="https://images.steamusercontent.com/ugc/2505772116923985863/396AB6C3F473740BCEF284E1C2C2817422E23E74/?imw=1024&imh=636&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true" target="_blank">
+          <button type="submit">Купити</button>
+        </form>
       `;
       container.appendChild(div);
     });
