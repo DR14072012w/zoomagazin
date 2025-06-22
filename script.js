@@ -3,8 +3,6 @@ let igrashka = document.querySelector('.igrashka')
 let klitka = document.querySelector('.klitka')
 let vsi = document.querySelector('.vsi')
 
-let patrik = "https://images.steamusercontent.com/ugc/2505772116923985863/396AB6C3F473740BCEF284E1C2C2817422E23E74/?imw=1024&imh=636&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true"
-
 const products = [
     {
       name: "Корм для котів",
