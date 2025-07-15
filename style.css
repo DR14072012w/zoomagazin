@@ -109,6 +109,14 @@ body {
   .basket-item{
     display: flex;
     justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    font-size: 22px;
+    border-bottom: 1px dotted rgb(182, 182, 182);
+  }
+
+  .basket-item:last-child{
+    border: none;
   }
 
   .korzinaItem{
