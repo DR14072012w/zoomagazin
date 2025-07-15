@@ -10,7 +10,14 @@
   <header>
     <h1>Ласкаво просимо до Зоомагазину "Клоп іт"</h1>
     <img class="korzinaImg" src="img/Korzina.png">
-    <div class="korzinaBlock"></div>
+    <div class="korzinaBlock">
+      <div class="korzinaItem"></div>
+      <div class="menuKorzina">
+        <div class="delete"><img src="img/Korzina.png" width="30px" height="30px"></div>
+        <div class="countPrice"></div>
+      </div>
+    </div>
+    <div class="count-buy"></div>
   </header>
 
   <nav>
@@ -33,5 +40,20 @@
   </div>
 
   <script src="script.js"></script>
+
+  <script>
+    let countBuy = document.querySelector(".count-buy")
+    if (localStorage.length = 0){
+      countBuy.innerHTML = ""
+    } else{
+      let count = 0
+      for (let key in localStorage){
+        if (localStorage.hasOwnProperty(key)){
+          let temp = JSON.parse(localStorage.getItem(key) || "{}")
+          count += temp["count"]
+        }}
+        countBuy.innerText = count.toString()
+    }
+  </script>
 </body>
 </html>

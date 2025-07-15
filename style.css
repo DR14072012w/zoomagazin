@@ -95,10 +95,39 @@ body {
   .korzinaBlock {
     display: none;
     flex-direction: column;
-    width: 30%;
+    width: 37%;
     height: 40%;
     position: absolute;
-    left: 40%;
+    left: 30%;
     top: 35%;
-    background-color:aqua;
+    background-color:#58BC82;
+    overflow-x: auto;
+    white-space: nowrap;
+    align-items: center;
+  }
+
+  .basket-item{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .korzinaItem{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .countPrice{
+    font-size: 22px;
+  }
+
+  .delete{
+    background-color: rgb(126, 48, 74);
+  }
+
+  .menuKorzina{
+    display: flex;
+    height: 10%;
+    flex-direction: row;
   }

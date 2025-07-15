@@ -3,9 +3,17 @@ let igrashka = document.querySelector('.igrashka')
 let klitka = document.querySelector('.klitka')
 let vsi = document.querySelector('.vsi')
 let korzinaImg = document.querySelector('.korzinaImg')
+let basketList = document.querySelector('.korzinaItem')
 let korzinaBlock = document.querySelector('.korzinaBlock')
+let deleteItem = document.querySelector('.delete')
 
-console.log("4871796479276")
+deleteItem.addEventListener("click", function(){
+  localStorage.clear()
+  countPrice.innerHTML = ""
+  add_basket_buy()
+})
+
+const korzina = []
 
 const products = [
     {
@@ -13,18 +21,21 @@ const products = [
       image: "https://zoolove.com.ua/components/com_jshopping/files/img_products/full_brit-premium-bn-cat-adult-chicken-2022-zoolove.jpg",
       price: 200,
       category: "Корм",
+      classB: "kormB"
     },
     {
       name: "Іграшка для собак",
       image: "https://zoo-club.com.ua/image/catalog/natafoto/igryshki/akdjidn.jpg",
       price: 150, 
-      category: "Іграшка"
+      category: "Іграшка",
+      classB: "igrashkaB"
     },
     {
       name: "Клітка для хом'яка",
       image: "https://murchyk.com.ua/img/10/734/1286/1286-4159-lg.jpg",
       price: 700,
-      category: "Клітка"
+      category: "Клітка",
+      classB: "klitkaB"
     }
   ];
   
@@ -37,7 +48,7 @@ const products = [
       <img src="${product.image}" alt="${product.name}">
       <h3>${product.name}</h3>
       <p class="price">${product.price} грн</p>
-      <button>Купити</button>
+      <button>Додати до корзини</button>
     `;
     container.appendChild(div);
   });
@@ -54,7 +65,7 @@ const products = [
           <img src="${product.image}" alt="${product.name}">
           <h3>${product.name}</h3>
           <p class="price">${product.price} грн</p>
-          <button>Купити</button>
+          <button>Додати до корзини</button>
         `;
         container.appendChild(divN);
       }
@@ -85,7 +96,7 @@ const products = [
         <img src="${product.image}" alt="${product.name}">
         <h3>${product.name}</h3>
         <p class="price">${product.price} грн</p>
-        <button>Купити</button>
+        <button>Додати до корзини</button>
       `;
       container.appendChild(div);
     });
@@ -110,14 +121,40 @@ for (let i=0; i<productList.length; i++) {
   })
 }
 let check = 0
+alert()
 
 korzinaImg.addEventListener("click", function(){
   console.log("123")
   if (check==0){
     check = 1
     korzinaBlock.style.display = "flex"
+    add_basket_buy()
   }else{
     check = 0
     korzinaBlock.style.display = "none"
   }
 })
+
+let countPrice = document.querySelector(".countPrice")
+
+function add_basket_buy(){
+  basketList.innerHTML = ""
+  let countPrice = 0
+  if (localStorage.length = 0){
+    basketList.innerHTML = "<h1>У вашому кошику пусто</h1>"
+  }else{
+    for(let key in localStorage){
+      if (localStorage.hasOwnProperty(key)){
+        let tempData = JSON.parse(localStorage.getItem(key) || "{}")
+        basketList.innerHTML += `<article class="basket-item">
+        <img src="${tempData["img"]}">
+        <div class="basket-name-item">${tempData["name"]}</div>
+        <div class="basket-count-item">${tempData["count"]}</div>
+        <div class="basket-count-price">${tempData["price"]} грн</div>
+        </article>`
+        countPrice.innerText = +countPrice.innerText+tempData["price"]
+      }}
+      alert(tempData["price"])
+    basketList.innerHTML += `<div class="countPrice">${countPrice}</div>`
+  }
+}
