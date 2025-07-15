@@ -17,7 +17,7 @@ const products = [
     {
       name: "Іграшка для собак",
       image: "https://zoo-club.com.ua/image/catalog/natafoto/igryshki/akdjidn.jpg",
-      price: 150,
+      price: 150, 
       category: "Іграшка"
     },
     {
@@ -92,19 +92,19 @@ const products = [
   })
 
 let productList = document.querySelectorAll('.product')
-for (let pr in productList) {
-  let tempButton = pr.querySelector('button')
+for (let i=0; i<productList.length; i++) {
+  let tempButton = productList[i].querySelector('button')
   tempButton.addEventListener('click', function(){
-    if (!localStorage.getItem(pr.querySelector('h3').innerHTML)){
-    localStorage.setItem(pr.querySelector('h3').innerHTML, JSON.stringify({
-      name: pr.querySelector('h3').innerHTML,
-      image: pr.querySelector('img').innerHTML,
-      price: pr.querySelector('.price').innerHTML,
+    if (!localStorage.getItem(productList[i].querySelector('h3').innerHTML)){
+    localStorage.setItem(productList[i].querySelector('h3').innerHTML, JSON.stringify({
+      name: productList[i].querySelector('h3').innerHTML,
+      image: productList[i].querySelector('img').innerHTML,
+      price: productList[i].querySelector('.price').innerHTML,
       count: 1}))
     } else{
-      let temp = JSON.parse(localStorage.getItem(pr.querySelector('h3').innerHTML) || "{}")
+      let temp = JSON.parse(localStorage.getItem(productList[i].querySelector('h3').innerHTML) || "{}")
       temp["count"]+=1
-      localStorage.setItem(pr.querySelector('h3').innerHTML, JSON.stringify(temp))
+      localStorage.setItem(productList[i].querySelector('h3').innerHTML, JSON.stringify(temp))
     }
     
   })
