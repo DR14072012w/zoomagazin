@@ -21,21 +21,24 @@ const products = [
       image: "https://zoolove.com.ua/components/com_jshopping/files/img_products/full_brit-premium-bn-cat-adult-chicken-2022-zoolove.jpg",
       price: 200,
       category: "Корм",
-      classB: "kormB"
     },
     {
       name: "Іграшка для собак",
       image: "https://zoo-club.com.ua/image/catalog/natafoto/igryshki/akdjidn.jpg",
       price: 150, 
       category: "Іграшка",
-      classB: "igrashkaB"
     },
     {
       name: "Клітка для хом'яка",
       image: "https://murchyk.com.ua/img/10/734/1286/1286-4159-lg.jpg",
       price: 700,
       category: "Клітка",
-      classB: "klitkaB"
+    },
+    {
+      name: "Корм для собак",
+      image: "https://static.insales-cdn.com/images/products/1/440/624009656/333.jpeg",
+      price: 225,
+      category: "Корм",
     }
   ];
   
