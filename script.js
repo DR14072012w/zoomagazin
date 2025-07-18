@@ -121,7 +121,6 @@ for (let i=0; i<productList.length; i++) {
   })
 }
 let check = 0
-alert()
 
 korzinaImg.addEventListener("click", function(){
   console.log("123")
@@ -150,11 +149,10 @@ function add_basket_buy(){
         <img src="${tempData["img"]}">
         <div class="basket-name-item">${tempData["name"]}</div>
         <div class="basket-count-item">${tempData["count"]}</div>
-        <div class="basket-count-price">${tempData["price"]} грн</div>
+        <div class="basket-count-price">${tempData["price"]}</div>
         </article>`
         countPrice.innerText = +countPrice.innerText+tempData["price"]
       }}
-      alert(tempData["price"])
     basketList.innerHTML += `<div class="countPrice">${countPrice}</div>`
   }
 }
